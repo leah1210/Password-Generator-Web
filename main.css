@@ -1,0 +1,61 @@
+/* p{
+letter-spacing: 5px;
+font-size: 300%;
+} */
+
+/* myText{
+color: brown;
+}
+
+#this-one {
+  color: blue;
+} */
+html{
+  background-color:#9e7a65;
+  background: repeating-linear-gradient( to right, 
+  #9e7a65, 
+  #9e7a65 20px, 
+  #eae3dd 20px, 
+  #eae3dd 20.11px);
+  color: rgb(78, 78, 78);
+  font-family: 'trebuchet', 'Lato', 'Arial';
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-rendering: optimizeLegibility;
+}
+
+h1{
+  font-size: 50px;
+  text-align: center;
+  color: #eae3dd;
+}
+
+section{
+  font-family: maison_neuebook;
+  background-color: #eae3dd;
+  padding: 35px;
+  margin: auto;
+  width: 60%;
+  border: .125px solid rgb(167, 167, 167);
+  text-align: center;
+}
+
+#create{
+    display: inline-block;
+    text-align: center;
+    padding: 10px 25px;
+    font-size: 75%;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+#letters{
+  margin-left: -17px;
+}
+
+/* .check-boxes{
+  text-align: left;
+} */
+

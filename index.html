@@ -1,0 +1,64 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Password Generator</title>
+
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="grid.css">
+
+</head>
+
+<body>
+  <header>
+    <h1>Password Generator</h1>
+  </header>
+
+  <section class='user-input'>
+    <h3>How many characters do you want your password to be?</h3>
+    <div class='row'>
+      <div class='col span-1-of-2'>
+        <input type="text" id="characters">
+      </div>
+      <div class='col span-1-of-2 button'>
+        <button id="create" type="button">Create</button>
+      </div>
+    </div>
+  </section>
+
+  <section class='criteria'>
+    <h2>Choose from the following criteria:</h2>
+    <div class="check-boxes">
+      <input type="checkbox" id="special">
+      <label for="special">Should password include any special characters?</label><br>
+      <input type="checkbox" id="letters">
+      <label for="letters">Should password include letters and numbers?</label><br>
+      <!-- <input type="checkbox" id="lowercase">
+      <label for="lowercase">Should password include only lowercase?</label><br> -->
+    </div>
+  </section>
+
+  <section class='passwords'>
+    <h2>Choose from any of the following 3 randomly generated passwords</h2>
+    <!-- <div class="password-row">
+      <div class="col span-1-of-3"> -->
+    <p id='random-password-1'></p>
+    <!-- </div>
+      <div class="col span-1-of-3">
+        <button id="password" type="button">Copy</button>
+      </div>
+    </div> -->
+
+
+    <p id='random-password-2'></p>
+    <p id='random-password-3'></p>
+  </section>
+
+  <script src="batteries.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
