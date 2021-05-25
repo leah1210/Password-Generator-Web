@@ -21,6 +21,17 @@ const makePassword = (length, characterSet) => {
 
 console.log(makePassword(10, characters));
 
+//copy function
+
+const Clipboard_CopyTo = (value) => {
+  const tempInput = document.createElement("input");
+  tempInput.value = value;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
+}
+
 
 //----------------------------- onclick ---------------------------------//
 
@@ -43,15 +54,28 @@ button.onclick = () => {
       theElement.innerText = (makePassword(stringToNum, characters));
     }, 200);
 
+    document.getElementById('pwButton').style.display = 'inline-block'
+
+
+    document.querySelector('#pwButton').onclick = function () {
+      Clipboard_CopyTo(theElement.innerText);
+    }
+
     const theElement2 = document.querySelector('#random-password-2')
     setTimeout(() => {
       theElement2.innerText = (makePassword(stringToNum, characters));
     }, 200);
 
+    document.getElementById('pwButton2').style.display = 'inline-block'
+
+
     const theElement3 = document.querySelector('#random-password-3')
     setTimeout(() => {
       theElement3.innerText = (makePassword(stringToNum, characters));
     }, 200);
+
+    document.getElementById('pwButton3').style.display = 'inline-block'
+
 
   } else if (cbLetters.checked === true) {
     const theElement4 = document.querySelector('#random-password-1')
@@ -59,15 +83,22 @@ button.onclick = () => {
       theElement4.innerText = (makePassword(stringToNum, justLetters));
     }, 200);
 
+    document.getElementById('pwButton').style.display = 'inline-block'
+
     const theElement5 = document.querySelector('#random-password-2')
     setTimeout(() => {
       theElement5.innerText = (makePassword(stringToNum, justLetters));
     }, 200);
 
+    document.getElementById('pwButton2').style.display = 'inline-block'
+
     const theElement6 = document.querySelector('#random-password-3')
     setTimeout(() => {
       theElement6.innerText = (makePassword(stringToNum, justLetters));
     }, 200);
+
+    document.getElementById('pwButton3').style.display = 'inline-block'
+
   } else {
     'not applicable'
   }
@@ -76,6 +107,9 @@ button.onclick = () => {
   // css = display none
   //js = display inline block
   //display value none
+  //radio buttons
+  //css bootstrap, material ui. bulma
+
   //   const copyText = () => {
   //     /* Get the text field */
   //     const copyText = document.getElementById("password");

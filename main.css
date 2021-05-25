@@ -51,6 +51,18 @@ section{
     transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 
+#pwButton{
+  display: none;
+}
+
+#pwButton2{
+  display: none;
+}
+
+#pwButton3{
+  display: none;
+}
+
 #letters{
   margin-left: -17px;
 }

@@ -31,10 +31,10 @@
 
   <section class='criteria'>
     <h2>Choose from the following criteria:</h2>
-    <div class="check-boxes">
-      <input type="checkbox" id="special">
+    <div class="radio">
+      <input type="radio" value="special" name="criteria" id="special">
       <label for="special">Should password include any special characters?</label><br>
-      <input type="checkbox" id="letters">
+      <input type="radio" value="letters" name="criteria" id="letters">
       <label for="letters">Should password include letters and numbers?</label><br>
       <!-- <input type="checkbox" id="lowercase">
       <label for="lowercase">Should password include only lowercase?</label><br> -->
@@ -46,15 +46,17 @@
     <!-- <div class="password-row">
       <div class="col span-1-of-3"> -->
     <p id='random-password-1'></p>
+    <button id="pwButton" type="button">Copy</button>
     <!-- </div>
       <div class="col span-1-of-3">
         <button id="password" type="button">Copy</button>
       </div>
     </div> -->
 
-
     <p id='random-password-2'></p>
+    <button id="pwButton2" type="button">Copy</button>
     <p id='random-password-3'></p>
+    <button id="pwButton3" type="button">Copy</button>
   </section>
 
   <script src="batteries.js"></script>
