@@ -6,7 +6,7 @@
 
 const justLetters = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890'
 
-const characters = '1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM!@#$%^&*(){}?/.,<>:"][]'
+const characters = '1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM!@#$%^&*(){}?/,<>:"][]'
 
 //------------------- password function --------------------//
 
@@ -48,7 +48,23 @@ button.onclick = () => {
   const cbLetters = document.getElementById('letters');
   const cbLowercase = document.getElementById('lowercase');
 
-  if (cbSpecial.checked === true) {
+  if (!cbSpecial.checked && !cbLetters.checked) {
+    const theElement7 = document.querySelector('#error')
+    setTimeout(() => {
+      theElement7.innerText = ('You must choose one of the above criteria');
+    }, 200);
+
+
+    // } else if (length < 2) {
+    //   const theElement8 = document.querySelector('#less-than-2')
+    //   setTimeout(() => {
+    //     theElement8.innerText = ('You must choose a number that is higher than 2');
+    //   }, 200);
+
+  } else if (cbSpecial.checked === true) {
+
+    document.getElementById('error').style.display = 'none'
+
     const theElement = document.querySelector('#random-password-1')
     setTimeout(() => {
       theElement.innerText = (makePassword(stringToNum, characters));
@@ -68,6 +84,9 @@ button.onclick = () => {
 
     document.getElementById('pwButton2').style.display = 'inline-block'
 
+    document.querySelector('#pwButton2').onclick = function () {
+      Clipboard_CopyTo(theElement2.innerText);
+    }
 
     const theElement3 = document.querySelector('#random-password-3')
     setTimeout(() => {
@@ -76,14 +95,24 @@ button.onclick = () => {
 
     document.getElementById('pwButton3').style.display = 'inline-block'
 
+    document.querySelector('#pwButton3').onclick = function () {
+      Clipboard_CopyTo(theElement3.innerText);
+    }
 
   } else if (cbLetters.checked === true) {
+
+    document.getElementById('error').style.display = 'none'
+
     const theElement4 = document.querySelector('#random-password-1')
     setTimeout(() => {
       theElement4.innerText = (makePassword(stringToNum, justLetters));
     }, 200);
 
     document.getElementById('pwButton').style.display = 'inline-block'
+
+    document.querySelector('#pwButton').onclick = function () {
+      Clipboard_CopyTo(theElement4.innerText);
+    }
 
     const theElement5 = document.querySelector('#random-password-2')
     setTimeout(() => {
@@ -92,6 +121,10 @@ button.onclick = () => {
 
     document.getElementById('pwButton2').style.display = 'inline-block'
 
+    document.querySelector('#pwButton2').onclick = function () {
+      Clipboard_CopyTo(theElement5.innerText);
+    }
+
     const theElement6 = document.querySelector('#random-password-3')
     setTimeout(() => {
       theElement6.innerText = (makePassword(stringToNum, justLetters));
@@ -99,9 +132,18 @@ button.onclick = () => {
 
     document.getElementById('pwButton3').style.display = 'inline-block'
 
-  } else {
-    'not applicable'
+    document.querySelector('#pwButton3').onclick = function () {
+      Clipboard_CopyTo(theElement6.innerText);
+    }
+
+    // } else {
+    //   const theElement7 = document.querySelector('#error')
+    //   setTimeout(() => {
+    //     theElement7.innerText = ('You must choose one of the above criteria');
+    //   }, 200);
+
   }
+
 
   //--------------------- Copy to Clipboard ---------------------------------//
   // css = display none
@@ -134,9 +176,3 @@ button.onclick = () => {
   //   document.execCommand("copy");
   //   document.body.removeChild(input_temp);
 };
-
-
-
-
-
-
